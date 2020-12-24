@@ -14,12 +14,21 @@ function timer_handler() {
     req.addHeader('X-Imprement', 'mJS');
 
     let res = HTTPLib.send(req);
+
     if (res.isSuccess()) {
         print('Status', res.getStatus());
+        //ヘッダ値取得
+        let val = res.getHeaderValWithBuff('content-type');
+        let val2 = res.getHeaderValWithBuff('date');
+        print('content-type=' + val);
+        print('date=' + val2);
+
+        // body
         let body = res.getBody();
         print('body:', body);
+        // json属性
         let rjson = JSON.parse(body);
-        print('success:', rjson['success']);
+        print('JSON attr["success"]:', rjson['success']);
     } else {
         print('HTTP Request Error:', res.getStatus());
     }
