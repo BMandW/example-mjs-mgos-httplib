@@ -18,10 +18,10 @@ function timer_handler() {
     if (res.isSuccess()) {
         print('Status', res.getStatus());
         //ヘッダ値取得
-        let val = res.getHeaderValWithBuff('content-type');
-        let val2 = res.getHeaderValWithBuff('date');
+        let val = res.getHeaderVal('content-type');
         print('content-type=' + val);
-        print('date=' + val2);
+        //let val2 = res.getHeaderVal('date');
+        //print('date=' + val2);
 
         // body
         let body = res.getBody();
@@ -31,6 +31,9 @@ function timer_handler() {
         print('JSON attr["success"]:', rjson['success']);
     } else {
         print('HTTP Request Error:', res.getStatus());
+        // body
+        let body = res.getBody();
+        print('body:', body);
     }
     res.free();
 }
