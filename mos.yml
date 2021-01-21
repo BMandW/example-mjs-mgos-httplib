@@ -25,7 +25,7 @@ libs:
   - origin: https://github.com/mongoose-os-libs/bme280
   - origin: https://github.com/mongoose-os-libs/mjs
   - origin: https://github.com/BMandW/mgos-httplib
-    version: 1.0.4
+    version: master
   #- name: mgos-httplib
 
 tags:
