@@ -49,4 +49,4 @@ function timer_handler() {
     res.free();
 }
 
-Timer.set(60 * 1000, true, timer_handler, null);
+Timer.set(180 * 1000, true, timer_handler, null);
