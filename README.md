@@ -12,6 +12,7 @@ BME280から取得したセンサーデータを送信する。
 - レスポンスヘッダ値の取得
 - JSONレスポンスのparse
 
+fs配下にconf9.jsonを作成する
 
 ## config
 
@@ -19,5 +20,4 @@ BME280から取得したセンサーデータを送信する。
 - api_url: 送信先URL
 - i2c.sda_gpio: 21: BME280で使用するGPIO
 - i2c.scl_gpio: 22: BME280で使用するGPIO
-
 
